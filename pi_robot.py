@@ -21,26 +21,36 @@ try:
             char = screen.getch()
             if char == ord('q'):
                 break
+
+            # moves robot forward
             elif char == curses.KEY_UP:
                 GPIO.output(7,False)
                 GPIO.output(11,True)
                 GPIO.output(13,False)
                 GPIO.output(15,True)
+
+            # moves robot backwards    
             elif char == curses.KEY_DOWN:
                 GPIO.output(7,True)
                 GPIO.output(11,False)
                 GPIO.output(13,True)
                 GPIO.output(15,False)
+
+            # turns robot to the right 
             elif char == curses.KEY_RIGHT:
                 GPIO.output(7,True)
                 GPIO.output(11,False)
                 GPIO.output(13,False)
                 GPIO.output(15,True)
+
+            # turns robot to the left
             elif char == curses.KEY_LEFT:
                 GPIO.output(7,False)
                 GPIO.output(11,True)
                 GPIO.output(13,True)
                 GPIO.output(15,False)
+
+            # Stops    
             elif char == 10:
                 GPIO.output(7,False)
                 GPIO.output(11,False)

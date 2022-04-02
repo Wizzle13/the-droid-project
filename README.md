@@ -5,7 +5,8 @@ the initial setup was done using the follow instruction
 https://www.instructables.com/Raspberry-Pi-Wifi-Video-Streaming-Robot/
 
 ## R2-D2 referance image
-<img src="./assets/images/referanceImage.jpg">
+
+![R2D2 referance image](./assets/images/referanceImage.jpg)
 
 This project was created using the following :
 
