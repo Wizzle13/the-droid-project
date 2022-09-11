@@ -4,6 +4,8 @@ the initial setup was done using the follow instruction
 
 https://www.instructables.com/Raspberry-Pi-Wifi-Video-Streaming-Robot/
 
+https://www.youtube.com/watch?v=BeyBu-Mzeq4&t=21s
+
 ## R2-D2 referance image
 
 ![R2D2 referance image](./assets/images/referanceImage.jpg)
