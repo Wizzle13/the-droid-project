@@ -23,13 +23,7 @@
 8.  Login to device
 9.  Run sudo apt update
 10. Run sudo apt upgrade
-11. type mkdir droid
-12. type cd droid
-13. type sudo nano pi_droid.py
-14. copy text for pi_droid.py (local) to the new file
-15. press ^x to exit
-16. press Y to save
-17. type python pi_droid.py to run the file
+11. 
 
 ### install webcam using motion
 1.  type sudo apt-get install motion
@@ -56,6 +50,24 @@
 22. type sudo motion
 23. got to web browers ipaddress:8081
 
+
+### install node.js
+1. go to https://nodejs.org/dist/
+2. copy link https://nodejs.org/dist/v9.7.1/node-v9.7.1-linux-armv6l.tar.gz (may be newer version)
+3. SSH into raspberry Pi
+4. run curl -o node-v9.7.1-linux-armv6l.tar.gz https://nodejs.org/dist/v9.7.1/node-v9.7.1-linux-armv6l.tar.gz (same link as above)
+5. tar -xzf node-v9.7.1-linux-armv6l.tar.gz
+6. sudo cp -r node-v9.7.1-linux-armv6l/* /usr/local/
+7. node -v
+8. npm -v 
+9. sudo apt-get install git
+10. Create webserver dir in home (local) 
+11. run npm init
+12. npm install onoff
+13. npm install socket.io -save
+14. sudo apt install libcap2-bin
+15. sudo setcap cap_net_bind_service=+ep /usr/local/bin/node
+16. getcap -r /usr/ (to check permisions)
 
 
 
