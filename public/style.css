@@ -12,16 +12,16 @@ html {
 body {
     padding: 0;
     
-    background: green;
+    background: var(--background);
     color: var(--text-color);
 }
 .controller {
-    background: red;
+    background: var(--frame);
     padding: 10px;
 }
 
 .video {
-    background: teal;
+    background: var(--background);
     width: 100%;
     
 }
@@ -31,7 +31,7 @@ body {
 }
 
 .controlls {
-    background: pink;
+    background: var(--frame);
 }
 
 .grid-container {
