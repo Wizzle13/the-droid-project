@@ -70,6 +70,15 @@
 16. getcap -r /usr/ (to check permisions)
 
 
+### Updating files 
+1. go to /home/pi
+2. sudo git pull origin main
+3. cd back
+4. sudo cp -R /home/pi/* /usr/local/webserver/gpio/
+5. cd /usr/local/webserver/gpio/
+6. node webserver.js
+
+
 
 
 
