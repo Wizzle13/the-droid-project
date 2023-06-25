@@ -14,7 +14,7 @@
 ***
 ### setup raspberry
 1.  Download Raspberry Pi Imager
-2.  Choose operating system - Raspberry PI OS Desktop (Recommended)
+2.  Choose operating system - Raspberry PI OS Lite (legacy) (Recommended)
 3.  Select Storage 
 4.  Click Write (Configure setting before hand if you wish)
 5.  When completed remove disk and insert in to Raspberry Pi Zero
@@ -22,8 +22,7 @@
 7.  conntect to pi using SSH
 8.  Login to device
 9.  Run sudo apt update
-10. Run sudo apt upgrade
-11. 
+10. Run sudo apt upgrade 
 
 ### install webcam using motion
 1.  type sudo apt-get install motion
@@ -33,7 +32,7 @@
 5.  set daemon to on
 6.  press ctrl+w
 7.  type framerate
-8.  set to 1500
+8.  set to 100
 9.  press ctrl+w
 10. type live stream
 11. set stream_localhost to off
@@ -53,30 +52,30 @@
 
 ### install node.js
 1. go to https://nodejs.org/dist/
-2. copy link https://nodejs.org/dist/v9.7.1/node-v9.7.1-linux-armv6l.tar.gz (may be newer version)
+2. copy link https://nodejs.org/dist/latest-v11.x/node-v11.15.0-linux-armv6l.tar.gz (may be newer version)
 3. SSH into raspberry Pi
-4. run curl -o node-v9.7.1-linux-armv6l.tar.gz https://nodejs.org/dist/v9.7.1/node-v9.7.1-linux-armv6l.tar.gz (same link as above)
-5. tar -xzf node-v9.7.1-linux-armv6l.tar.gz
-6. sudo cp -r node-v9.7.1-linux-armv6l/* /usr/local/
-7. node -v
-8. npm -v 
-9. sudo apt-get install git
-10. Create webserver dir in home (local) 
-11. run npm init
-12. npm install onoff
-13. npm install socket.io -save
-14. sudo apt install libcap2-bin
-15. sudo setcap cap_net_bind_service=+ep /usr/local/bin/node
-16. getcap -r /usr/ (to check permisions)
+4. run curl -o node-v11.15.0-linux-armv6l.tar.gz https://nodejs.org/dist/latest-v11.x/node-v11.15.0-linux-armv6l.tar.gz
+5. tar -xzf node-v11.15.0-linux-armv6l.tar.gz
+6. cd node-v11.15.0-linux-armv6l
+7. sudo cp -R * /usr/local/
+8. node -v
+9. npm -v 
+10. sudo apt-get install git
+11. Create webserver dir in home (local) 
+12. sudo chmod ugo+rwx webserver (changes permision on folder)
+13. cd webserver
+14. run npm init
+15. npm install onoff
+16. npm install socket.io -save
+17. sudo apt install libcap2-bin
+18. sudo setcap cap_net_bind_service=+ep /usr/local/bin/node
+19. getcap -r /usr/ (to check permisions)
 
 
 ### Updating files 
-1. go to /home/pi
+1. cd /usr/local/webserver/gpio/
 2. sudo git pull origin main
-3. cd back
-4. sudo cp -R /home/pi/* /usr/local/webserver/gpio/
-5. cd /usr/local/webserver/gpio/
-6. node webserver.js
+3. node webserver.js
 
 
 

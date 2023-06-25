@@ -6,6 +6,8 @@ https://www.instructables.com/Raspberry-Pi-Wifi-Video-Streaming-Robot/
 
 https://www.youtube.com/watch?v=BeyBu-Mzeq4&t=21s
 
+https://codepen.io/marcusconnor/pen/QJNvMa  on off switch
+
 ## R2-D2 referance image
 
 ![R2D2 referance image](./assets/images/referanceImage.jpg)

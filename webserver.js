@@ -4,10 +4,10 @@ var url = require('url');
 var path = require('path');
 var io = require('socket.io','net')(http) //require socket.io module and pass the http object (server)
 var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
-var LED26 = new Gpio(7, 'out'); //use GPIO pin 7 as output
-var LED20 = new Gpio(11, 'out'); //use GPIO pin 11 as output
-var LED21 = new Gpio(13, 'out'); //use GPIO pin 13 as output
-var LED16 = new Gpio(15, 'out'); //use GPIO pin 15 as output
+var motor7 = new Gpio(7, 'out'); //use GPIO pin 7 as output
+var motor11 = new Gpio(11, 'out'); //use GPIO pin 11 as output
+var motor13 = new Gpio(13, 'out'); //use GPIO pin 13 as output
+var motor15 = new Gpio(15, 'out'); //use GPIO pin 15 as output
 
 
 var GPIO7value = 0;  // Turn on the LED by default
